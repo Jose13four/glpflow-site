@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLP Flow â Meal Planning Made Simple on GLP-1</title>
+  <meta name="description" content="Practical meal plans, recipes, and tips for Ozempic, Wegovy, Mounjaro, and Zepbound users. Eat better on GLP-1 medications.">
+  <link rel="canonical" href="https://glpflow.app">
+  <meta property="og:title" content="GLP Flow â Meal Planning Made Simple on GLP-1">
+  <meta property="og:description" content="Practical meal plans, recipes, and tips for Ozempic, Wegovy, Mounjaro, and Zepbound users.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://glpflow.app">
+  <style>
+    :root {
+      --sand: #F3E6D5;
+      --navy: #1B2A4A;
+      --teal: #2A9D8F;
+      --coral: #E76F51;
+      --sand-dark: #E8D5BF;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      background: var(--sand);
+      color: var(--navy);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 800px; margin: 0 auto; padding: 20px 24px;
+    }
+    .nav-logo { font-weight: 800; font-size: 20px; color: var(--navy); text-decoration: none; letter-spacing: -0.5px; }
+    .nav-logo span { color: var(--teal); }
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a { color: var(--navy); text-decoration: none; font-size: 15px; font-weight: 500; opacity: 0.7; }
+
+    .hero {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px 40px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--teal);
+    }
+    .hero p {
+      font-size: 20px;
+      opacity: 0.7;
+      max-width: 520px;
+      margin: 0 auto 32px;
+      line-height: 1.5;
+    }
+
+    .cta-form {
+      display: flex;
+      gap: 8px;
+      max-width: 420px;
+      margin: 0 auto 16px;
+    }
+    .cta-form input {
+      flex: 1;
+      padding: 14px 18px;
+      border: 2px solid var(--sand-dark);
+      border-radius: 10px;
+      font-size: 16px;
+      font-family: inherit;
+      background: #fff;
+      color: var(--navy);
+    }
+    .cta-form input:focus { outline: none; border-color: var(--teal); }
+    .cta-form input::placeholder { color: rgba(27,42,74,0.35); }
+    .cta-form button {
+      background: var(--coral);
+      color: #fff;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      white-space: nowrap;
+    }
+    .trust-line {
+      font-size: 13px;
+      opacity: 0.45;
+      text-align: center;
+    }
+
+    .content {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .section-label {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--teal);
+      margin-bottom: 20px;
+    }
+
+    .article-grid {
+      display: grid;
+      gap: 16px;
+    }
+    .article-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      text-decoration: none;
+      display: block;
+      box-shadow: 0 2px 8px rgba(27,42,74,0.06);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .article-card:hover {
+      box-shadow: 0 4px 16px rgba(27,42,74,0.1);
+      transform: translateY(-2px);
+    }
+    .article-card-tag {
+      display: inline-block;
+      background: var(--sand);
+      color: var(--teal);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }
+    .article-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+      letter-spacing: -0.3px;
+    }
+    .article-card p {
+      font-size: 15px;
+      color: var(--navy);
+      opacity: 0.6;
+      line-height: 1.5;
+    }
+
+    .footer {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--navy);
+      opacity: 0.4;
+      border-top: 1px solid rgba(27,42,74,0.08);
+    }
+
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 32px; }
+      .hero { padding: 40px 16px 32px; }
+      .content { padding: 32px 16px 60px; }
+      .cta-form { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="nav-logo">GLP <span>Flow</span></a>
+    <div class="nav-links">
+      <a href="#guides">Guides</a>
+      <a href="https://glpflow.app" target="_blank">App</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Meal planning made <em>simple</em> on GLP-1</h1>
+    <p>Practical recipes, meal plans, and tips for Ozempic, Wegovy, Mounjaro, and Zepbound users.</p>
+    <form class="cta-form" id="hero-form">
+      <input type="email" name="email" placeholder="Your email" required>
+      <button type="submit">Get Free Meal Plan</button>
+    </form>
+    <p class="trust-line">Free weekly plan. No spam. Unsubscribe anytime.</p>
+    <p id="hero-ok" style="display:none; color:var(--coral); font-weight:600; font-size:16px; margin-top:8px;">You're in. Check your inbox.</p>
+  </section>
+
+  <section class="content" id="guides">
+    <div class="section-label">Latest Guides</div>
+    <div class="article-grid">
+      <a href="/high-protein-breakfast-ozempic" class="article-card">
+        <span class="article-card-tag">Ozempic Meals</span>
+        <h3>High-Protein Breakfast Ideas for Ozempic Users</h3>
+        <p>10 breakfasts with 25-40g protein that actually sit well on a smaller appetite. No complicated recipes.</p>
+      </a>
+      <a href="/ozempic-week-1-meal-plan" class="article-card">
+        <span class="article-card-tag">Week 1 Guide</span>
+        <h3>What to Eat on Ozempic Week 1</h3>
+        <p>Your first week on semaglutide â a day-by-day meal plan so you don't have to think about it.</p>
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    &copy; 2026 GLP Flow. Meal planning made simple on GLP-1.<br>
+    Not medical advice. Always consult your healthcare provider.
+  </footer>
+
+  <script>
+    document.getElementById('hero-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var email = this.querySelector('input[name=email]').value;
+      var form = new FormData();
+      form.append('email', email);
+      fetch('https://glpflow.beehiiv.com/create', { method: 'POST', body: form, mode: 'no-cors' });
+      this.style.display = 'none';
+      document.getElementById('hero-ok').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
